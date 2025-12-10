@@ -1,0 +1,6 @@
+
+def add(num1 ,num2):
+    print("num1 + num2 = ", num1+num2)
+
+def subt(num1 , num2):
+    print("num1 - num2 = ", num1-num2)
