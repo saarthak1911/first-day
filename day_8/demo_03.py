@@ -1,6 +1,10 @@
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.embeddings import init_embeddings
 
+
+#PyPDFLoader is a LangChain document loader used to read PDF files and convert them into text documents page-by-page.
+
+
 embed_model = init_embeddings(
     model="text-embedding-nomic-embed-text-v1.5",
     provider="openai",
@@ -10,6 +14,8 @@ embed_model = init_embeddings(
 )
 
 def load_pdf_resume(pdf_path):
+
+    #load pdf and extract text
     loader = PyPDFLoader(pdf_path)
     docs = loader.load()
     resume_content = ""
@@ -21,7 +27,7 @@ def load_pdf_resume(pdf_path):
     }
     return resume_content, metadata
 
-resume_path = "D:/Nilesh/Internship/GenAI-2/demos/resume-003.pdf"
+resume_path = "F:/git_1/resume/resume-003.pdf"
 resume_text, resume_info = load_pdf_resume(resume_path)
 print(resume_info)
 print(resume_text)

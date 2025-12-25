@@ -7,6 +7,11 @@ import numpy as np
 #.embed_documents(sentences) is used instead of .encode(sentences) when model is online not using llm on local machine
 
 
+
+#we calculate cosine similarity only to check how similar two statements are...
+
+
+
 def cosine_similatity(a,b):
     return np.dot(a , b) / (np.linalg.norm(a) * np.linalg.norm(b))
 
