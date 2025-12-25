@@ -12,7 +12,12 @@ sentences = [
     "I love football.",
     "Soccer is my favorite sports.",
     "Messi talks spanish."
-]
+    ]
+
+
+#embeddings = embed_model.encode(sentences)
+#.embed_encode(sentences) is used when you are not using langchain(retrieve, vector)
+# .embed_document(sentences) is used when you are using langchain with document
 emebeddings = embed_model.encode(sentences)
 
 for embed_vect in emebeddings:

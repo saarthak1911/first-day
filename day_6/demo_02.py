@@ -5,6 +5,7 @@ from langchain.agents import create_agent
 
 #just creating a agent withot tools for demo purpose
 #agent without the tool is just a chatbot
+# it gives ans by llm without any tool usage
 
 
 # create model
@@ -17,8 +18,10 @@ llm = init_chat_model(
 
 # conversation context
 conversation = []
+
 # create agent
-agent = create_agent(model=llm, 
+agent = create_agent(
+            model=llm, 
             tools=[],
             system_prompt="You are a helpful assistant. Answer in short."
         )
